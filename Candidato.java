@@ -4,12 +4,13 @@ public class Candidato {
     private int numero;
     private int votos;
 
-    // Construtor
+    // Construtor---------------------------------
     public Candidato(String nome, int numero) {
         this.setNome(nome);
+        this.setNumero(numero);
     }
 
-    // Getters e Setters
+    // Getters e Setters ---------------------------------
     public String getNome() {
         return this.nome;
     }
@@ -43,4 +44,10 @@ public class Candidato {
         }
         this.votos = votos;
     }
+    // Outros Métodos ---------------------------------
+
+    public void incrementarVotos() {
+        setVotos(this.votos++);
+    }
+
 }
