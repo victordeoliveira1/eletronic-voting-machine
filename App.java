@@ -7,8 +7,9 @@ public class App {
                 new Candidate("Albert Einstein", 04),
                 new Candidate("Ludwig van Beethoven", 05)
         };
+
         EletronicVotingMachine evm = new EletronicVotingMachine(candidatesList);
 
-        evm.showCandidates();
+        evm.startVoting();
     }
 }

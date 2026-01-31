@@ -8,11 +8,12 @@ public class Candidate {
     public Candidate(String name, int number) {
         this.setName(name);
         this.setNumber(number);
+        this.setVotes(0);
     }
 
     // Methods
     public void addVotes() {
-        setVotes(this.votes++);
+        setVotes(this.votes + 1);
     }
 
     // Getters e Setters
