@@ -4,7 +4,7 @@ public class Candidate {
     private int number;
     private int votes;
 
-    // Construtor
+    // Constructor
     public Candidate(String name, int number) {
         this.setName(name);
         this.setNumber(number);
@@ -46,7 +46,7 @@ public class Candidate {
     public void setVotes(int votes) {
         if (votes < 0) {
             throw new IllegalArgumentException(
-                    "Quantidade de Votos invalido, nao e permitido colocar um valor negativo");
+                    "Number of invalid votes; entering a negative value is not allowed.");
         }
         this.votes = votes;
     }

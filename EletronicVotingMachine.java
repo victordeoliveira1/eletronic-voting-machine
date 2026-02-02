@@ -7,7 +7,7 @@ public class EletronicVotingMachine {
     private int maxVotes;
     private Scanner scanner = new Scanner(System.in);
 
-    // Construtor
+    // Constructor
     public EletronicVotingMachine(Candidate[] candidates) {
         if (candidates == null) {
             throw new IllegalArgumentException("Invalid candidates array");
