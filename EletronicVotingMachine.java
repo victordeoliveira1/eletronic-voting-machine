@@ -44,20 +44,22 @@ public class EletronicVotingMachine {
     }
 
     public void receiveVote(int number) {
-        boolean voteIsNull = true;
-        for (Candidate c : candidates) {
-            voteIsNull = true;
-            if (c.getNumber() == number) {
-                c.addVotes();
-                voteIsNull = false;
-                break;
-            }
+    boolean voteIsNull = true;
+
+    for (Candidate c : candidates) {
+        if (c.getNumber() == number) {
+            c.addVotes();
+            voteIsNull = false;
+            break;
         }
-        if (voteIsNull) {
-            setNullVotes(getNullVotes() + 1);
-        }
-        System.out.println("Vote Confirmed!");
     }
+
+    if (voteIsNull) {
+        setNullVotes(getNullVotes() + 1);
+    }
+
+    System.out.println("Vote Confirmed!");
+}
 
     public void countVotes() {
         Candidate winner = candidates[0];
